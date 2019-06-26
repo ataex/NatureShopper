@@ -8,10 +8,12 @@ import { OrderSuccessComponent } from './shopping/components/order-success/order
 import { LoginComponent } from './core/components/login/login.component';
 import { AdminProductsComponent } from './admin/components/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/components/admin-orders/admin-orders.component';
+import { MyOrdersComponent } from './shopping/components/my-orders/my-orders.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'my-orders', component: MyOrdersComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
   { path: 'check-out', component: CheckOutComponent },
   { path: 'order-success', component: OrderSuccessComponent },
