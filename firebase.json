@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/NatureShopper",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
