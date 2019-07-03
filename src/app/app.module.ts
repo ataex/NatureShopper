@@ -18,6 +18,7 @@ import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopp
 import { LoginComponent } from './core/components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from './shared/services/auth.service';
+import { AuthGuardService } from './shared/services/auth-guard.service';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { AuthService } from './shared/services/auth.service';
     NgbModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
