@@ -17,6 +17,7 @@ import { ProductsComponent } from './shopping/components/products/products.compo
 import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
 import { LoginComponent } from './core/components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from './shared/services/auth.service';
 
 
 @NgModule({
@@ -41,7 +42,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireAuthModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
