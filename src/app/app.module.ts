@@ -20,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGuardService } from './shared/services/auth-guard.service';
 import { UserService } from './shared/services/user.service';
+import { AdminAuthGuardService } from './admin/services/admin-auth-guard.service';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { UserService } from './shared/services/user.service';
   providers: [
     AuthService,
     AuthGuardService,
+    AdminAuthGuardService,
     UserService
   ],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { MyOrdersComponent } from './shopping/components/my-orders/my-orders.com
 import { OrderSuccessComponent } from './shopping/components/order-success/order-success.component';
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
+import { AdminAuthGuardService } from './admin/services/admin-auth-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,8 +22,8 @@ const routes: Routes = [
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardService] },
   { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService] },
 
-  { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService] },
-  { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService] },
+  { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },
+  { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService, AdminAuthGuardService] },
 ];
 
 @NgModule({
