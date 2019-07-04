@@ -22,6 +22,7 @@ import { AuthGuardService } from './shared/services/auth-guard.service';
 import { UserService } from './shared/services/user.service';
 import { AdminAuthGuardService } from './admin/services/admin-auth-guard.service';
 import { ProductFormComponent } from './admin/components/product-form/product-form.component';
+import { CategoryService } from './shared/services/category.service';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { ProductFormComponent } from './admin/components/product-form/product-fo
     AuthService,
     AuthGuardService,
     AdminAuthGuardService,
+    CategoryService,
     UserService
   ],
   bootstrap: [AppComponent]
