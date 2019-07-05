@@ -25,6 +25,7 @@ import { ProductsComponent } from './shopping/components/products/products.compo
 import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from './shared/services/product.service';
+import { CustomFormsModule } from 'ng2-validation';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ProductService } from './shared/services/product.service';
   imports: [
     BrowserModule,
     FormsModule,
+    CustomFormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
