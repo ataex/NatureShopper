@@ -19,4 +19,8 @@ export class ProductService {
   get(id) {
     return this.db.object('/products/' + id).valueChanges();
   }
+
+  update(id, product) {
+    return this.db.object('/products/' + id).update(product);
+  }
 }
