@@ -30,9 +30,17 @@ export class ProductFormComponent implements OnInit {
   }
 
   save(product) {
-    if (this.id) { this.productService.update(this.id, this.product);
+    if (this.id) {
+      this.productService.update(this.id, this.product);
     } else { this.productService.create(product); }
 
+    this.router.navigate(['/admin/products']);
+  }
+
+  delete() {
+    if (!confirm('Are you sure?')) { return; }
+
+    this.productService.delete(this.id);
     this.router.navigate(['/admin/products']);
   }
 
