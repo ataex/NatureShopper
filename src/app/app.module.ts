@@ -26,6 +26,7 @@ import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopp
 import { FormsModule } from '@angular/forms';
 import { ProductService } from './shared/services/product.service';
 import { CustomFormsModule } from 'ng2-validation';
+import { DataTableModule } from '@ismatjon/angular-data-table';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { CustomFormsModule } from 'ng2-validation';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule
+    NgbModule,
+    DataTableModule
   ],
   providers: [
     AuthService,
