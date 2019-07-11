@@ -13,10 +13,7 @@ import { ProductService } from './../../../shared/services/product.service';
 export class AdminProductsComponent implements OnInit, OnDestroy {
   dtOptions: any = {};
   products: Product[] = [];
-  filteredProducts: Product[] = [];
   subscription: Subscription;
-
-
 
   constructor(private productService: ProductService) {
     this.subscription = productService.getAll().subscribe((p) => {
@@ -52,18 +49,12 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
-  filter(query: string) {
-    console.log(this.products);
-    this.filteredProducts = (query) ?
-      this.products.filter(p => p.title.toLowerCase().includes(query.toLowerCase()))
-      : this.products;
-  }
+
 
 }

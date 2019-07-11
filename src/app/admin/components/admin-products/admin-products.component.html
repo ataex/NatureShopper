@@ -3,10 +3,5 @@
     <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
   </p>
 </div>
-<div>
-  <p>
-    <input type="text" class="form-control" placeholder="Search..." #query (keyup)="filter(query.value)">
-  </p>
-</div>
 
 <table datatable [dtOptions]="dtOptions" *ngIf="dtOptions.data" class="row-border hover"></table>
