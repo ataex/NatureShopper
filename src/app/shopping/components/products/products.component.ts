@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/shared/services/product.service';
-import { Observable } from 'rxjs';
-import { Product } from 'src/app/shared/models/product';
+import { CategoryService } from 'src/app/shared/services/category.service';
 
 @Component({
   selector: 'app-products',
@@ -10,9 +9,11 @@ import { Product } from 'src/app/shared/models/product';
 })
 export class ProductsComponent implements OnInit {
   products$;
+  categories$;
 
-  constructor(productService: ProductService) {
+  constructor(productService: ProductService, categoryService: CategoryService) {
     this.products$ = productService.getAll();
+    this.categories$ = categoryService.getAll();
   }
 
   ngOnInit() {
