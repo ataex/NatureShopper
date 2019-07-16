@@ -28,6 +28,7 @@ import { ProductsComponent } from './shopping/components/products/products.compo
 import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
 import { DataTablesModule } from 'angular-datatables';
 import { ProductFilterComponent } from './shopping/components/products/product-filter/product-filter.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 
 
 
@@ -45,7 +46,8 @@ import { ProductFilterComponent } from './shopping/components/products/product-f
     AdminProductsComponent,
     LoginComponent,
     ProductFormComponent,
-    ProductFilterComponent
+    ProductFilterComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

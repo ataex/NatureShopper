@@ -51,13 +51,7 @@
       <button *ngIf="id != null" type="button" class="btn btn-danger" (click)="delete()"> Delete </button>
     </form>
   </div>
-  <div class="col">
-    <div *ngIf="product.title" class="card ml-5 mt-4" style="width: 18rem;">
-      <img *ngIf="product.imageUrl" [src]="product.imageUrl" class="card-img-top">
-      <div class="card-body">
-        <h2 class="card-title">{{ product.title }}</h2>
-        <p class="card-text">{{ product.price | currency }}</p>
-      </div>
-    </div>
+  <div class="col ml-4" style="width: 18rem;">
+    <app-product-card [product]="product" [show-actions]="false"></app-product-card>
   </div>
 </div>
