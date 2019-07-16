@@ -27,6 +27,7 @@ import { OrderSuccessComponent } from './shopping/components/order-success/order
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
 import { DataTablesModule } from 'angular-datatables';
+import { ProductFilterComponent } from './shopping/components/products/product-filter/product-filter.component';
 
 
 
@@ -43,7 +44,8 @@ import { DataTablesModule } from 'angular-datatables';
     AdminOrdersComponent,
     AdminProductsComponent,
     LoginComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,
